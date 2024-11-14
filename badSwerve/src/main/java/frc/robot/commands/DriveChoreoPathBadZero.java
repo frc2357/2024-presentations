@@ -26,16 +26,6 @@ public class DriveChoreoPathBadZero extends SequentialCommandGroup {
   }
 
   /**
-   * @param trajectoryFileName The name of the path file with '.traj' excluded.
-   * @param pathName The name of the path, is returned in the toString for the auto command chooser.
-   */
-  public DriveChoreoPathBadZero(String trajectoryFileName, boolean setPoseToStartTrajectory) {
-    // Overloaded constructor, sets the gyro yaw to zero and pose x, y to starting
-    // position
-    this(trajectoryFileName, setPoseToStartTrajectory, false);
-  }
-
-  /**
    * A utility command to run a Choreo path correctly.
    *
    * @param trajectoryFileName The name of the path file with '.traj' excluded.
@@ -43,7 +33,7 @@ public class DriveChoreoPathBadZero extends SequentialCommandGroup {
    *     trajectory.
    */
   public DriveChoreoPathBadZero(
-      String trajectoryFileName, boolean setPoseToStartTrajectory, boolean targetLock) {
+      String trajectoryFileName, boolean setPoseToStartTrajectory) {
     m_traj = Choreo.getTrajectory(trajectoryFileName); // Loads choreo file into trajctory object
     m_pathName =
         trajectoryFileName; // Gets the path name to display on the smardashboard via the toString()
