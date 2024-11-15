@@ -11,6 +11,6 @@ public class AutoBadZero extends SequentialCommandGroup {
 
   @Override
   public String toString() {
-    return "Auto1";
+    return "Auto Bad Zero";
   }
 }
