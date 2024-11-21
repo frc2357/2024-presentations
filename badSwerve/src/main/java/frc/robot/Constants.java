@@ -28,6 +28,11 @@ public final class Constants {
     public static final int kDriverControllerPort = 0;
   }
 
+  public static final class CAN_ID {
+    public static final int INTAKE = 5;
+  }
+
+
   public static final class SWERVE {
     public static final double MAX_ANGULAR_RATE_ROTATIONS_PER_SECOND = Math.PI * 2;
 

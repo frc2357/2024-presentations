@@ -11,6 +11,7 @@ import edu.wpi.first.wpilibj2.command.CommandScheduler;
 import frc.robot.commands.DefaultDrive;
 import frc.robot.controls.DriverControls;
 import frc.robot.subsystems.CommandSwerveDrivetrain;
+import frc.robot.subsystems.Intake;
 
 /**
  * The VM is configured to automatically run this class, and to call the
@@ -27,6 +28,8 @@ public class Robot extends TimedRobot {
   private RobotContainer m_robotContainer;
 
   public static CommandSwerveDrivetrain swerve;
+  public static Intake intake;
+  
   public static DriverControls driverControls;
 
   /**
@@ -46,6 +49,8 @@ public class Robot extends TimedRobot {
         0.01);
     
     swerve.setDefaultCommand(new DefaultDrive());
+
+    intake = new Intake();
 
     m_robotContainer = new RobotContainer();
   }

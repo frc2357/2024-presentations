@@ -11,6 +11,8 @@ import edu.wpi.first.wpilibj2.command.WaitCommand;
 import frc.robot.commands.Auto1;
 import frc.robot.commands.AutoBadStartPose;
 import frc.robot.commands.AutoBadZero;
+import frc.robot.commands.AutoIntake;
+
 import java.util.HashMap;
 
 public class AutoCommandChooser {
@@ -25,7 +27,8 @@ public class AutoCommandChooser {
     Command[] autoCommands = {
         new Auto1(),
         new AutoBadStartPose(),
-        new AutoBadZero()
+        new AutoBadZero(),
+        new AutoIntake()
     };
 
     HashMap<String, Command> commandMap = new HashMap<String, Command>(autoCommands.length + 1);
